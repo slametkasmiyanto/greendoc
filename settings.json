@@ -1,0 +1,7 @@
+{
+  "galaxy.meteor.com": {
+     "env": {
+       "MONGO_URL": "mongodb://samnumit:kosongin4j4@ds139909.mlab.com:39909/greendoku"
+     }
+   }
+}

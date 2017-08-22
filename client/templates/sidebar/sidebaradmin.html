@@ -1,0 +1,24 @@
+<template name="sidebaradmin">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Pengaturan Sistem</strong></h3>
+        </div>
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="/admin"><strong>Ringkasan Pengaturan</strong></a></li>
+              <li><a href="/kategori/aturuser">Atur Akun</a></li>
+              <li><a href="/kategori/aturgrup">Atur Grup</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  Atur Berkas <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/kategori/aturjenisberkas">Jenis Berkas</a></li>
+                  <li><a href="/kategori/aturstatusberkas">Status Berkas</a></li>
+                  <li><a href="/kategori/atursifatberkas">Sifat Berkas</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+</template>

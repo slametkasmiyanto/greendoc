@@ -1,0 +1,46 @@
+<template name="register_ORIG">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form class="form-signup" method="post">
+        <img src="/images/kotabekasi.jpg" class="logo-bekasi" alt="" />
+        <div class="panel">
+          <div class="panel-heading">
+            <h2 class="form-signup-heading"><strong>Green</strong>Doc</h2>
+          </div>
+          <div class="panel-body">
+            <div class="form-group col-lg-12">
+              <label for="nama" class="sr-only">Nama</label>
+              <input type="text" class="form-control" id="nama" placeholder="Nama" required autofocus/>
+            </div>
+            <div class="form-group col-lg-12">
+              <label for="grup" class="sr-only">Grup</label>
+              <select type="text" id="grup" class="form-control" required autofocus>
+                <option selected hidden>(Pilih Grup)</option>
+                <option value="sekolah">Sekolah</option>
+                <option value="admin">UPTD</option>
+                <option value="disdik">Disdik</option>
+              </select>
+            </div>
+            <div class="form-group col-lg-12" style="margin-top:10px">
+              <label for ="email" class="sr-only">Alamat Surel</label>
+              <input type="email" class="form-control" id="email" placeholder="Alamat Surel" required autofocus/>
+            </div>
+            <div class="form-group col-lg-12">
+              <label for="password" class="sr-only">Kata Sandi</label>
+              <input type="password" class="form-control" id="password" placeholder="Kata Sandi" required autofocus/>
+            </div>
+            <div class="form-group col-lg-12">
+              <label for="password2" class="sr-only">Konfirmasi Kata Sandi</label>
+              <input type="password" class="form-control" id="password2" placeholder="Ulangi Kata Sandi" required autofocus/>
+            </div>
+          </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Buat Akun</button>
+        </div>
+        <hr />
+        <p><strong>UPTD Pembinaan SD Kecamatan Mustika Jaya</strong></p>
+        <p><strong>Dinas Pendidikan Kota Bekasi</strong></p>
+        <p><strong>&copy; 2017</strong></p>
+      </form>
+    </div>
+  </div>
+</template>

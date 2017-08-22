@@ -1,0 +1,56 @@
+<template name="navbar">
+  <div class="container">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/home"><strong>Green</strong>Doc</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li><a href="/home">Beranda </a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Berkas-berkas <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/berkas/unggahberkas">Unggah Berkas</a></li>
+              <li class="divider"></li>
+              <li><a href="/berkas/semuaberkas">Semua Berkas </a></li>
+              <li class="divider"></li>
+              <li><a href="/berkas/berkasmasuk">Berkas Masuk</a></li>
+              <li><a href="/berkas/berkaskeluar">Berkas Keluar</a></li>
+            </ul>
+          </li>
+          {{#if isInRole 'admin'}}
+            <li><a href="/admin">Pengaturan</a></li>
+          {{/if}}
+        </ul>
+        <div class="navbar-right navbar-nav nav">
+          {{#if currentUser}}
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                Akun: <strong>{{currentUser.profile.nama}}</strong>
+                <img width="20px" src="{{currentUser.profile.avatar}}" alt="Avatar" class="img-circle"/>
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/profil">Profil</a></li>
+                <li class="divider"></li>
+                <li><a href="/logout">Keluar</a></li>
+              </ul>
+            </li>
+          {{else}}
+            <a href="/" class="btn btn-default navbar-btn">Masuk</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+</template>

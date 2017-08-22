@@ -1,0 +1,13 @@
+<template name="layout">
+  {{> flashMessages}}
+  {{> navbar}}
+  <div class="container">
+      <div class="col-md-3 col-sm-6 hidden-xs hidden-sm">
+        {{> Template.dynamic template=sidebar}}
+      </div>
+      <div class="col-md-9 col-sm-6">
+        {{> Template.dynamic template=main}}
+      </div>
+  </div>
+  {{> footer}}
+</template>

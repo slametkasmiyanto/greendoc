@@ -1,0 +1,42 @@
+<template name="aturjenisberkas">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-1">
+        <div class="form-group">
+          <label class="control-label">Masukkan jenis berkas:</label>
+          <input type="text" id="tambahJenisBerkasId" class="form-control input-sm"/>
+          <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+              <button class="btn btn-info tambahJenisBerkas" type="submit">
+              <i class="fa fa-database"> Tambah</i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+<!-- display data -->
+    <div class="col-md-4 col-md-offset-1">
+      <table class="table table-striped table-bordered table-responsive table-hover">
+        <thead>
+          <tr class="success">
+            <th>Jenis Berkas</th>
+            <th>Hapus</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each jenis}}
+            <tr>
+              <td>{{capFirst nama}}</td>
+              <td><button id="hapusJenisBerkasId" type="submit" class="btn btn-sm btn-danger hapusJenisBerkas">
+                   <i class="fa fa-trash"></i> Hapus</button>
+              </td>
+            </tr>
+          {{else}}
+            <tr>
+              <td colspan="4">Tidak ada jenis berkas! </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  </div>
+</div>
+</template>

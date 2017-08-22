@@ -1,0 +1,70 @@
+<template name="unggahberkas">
+      <form id="unggahBerkasFormId" method="post">
+        <h1>Unggah Berkas</h1><hr/>
+            <div class="form-group col-md-4">
+                <label>Tanggal</label>
+                <input required type="date" id="tanggalId" class="form-control" name="tanggal" placeholder="Tanggal">
+            </div>
+            <div class="form-group col-md-4">
+                <label>No. Surat</label>
+                <input required type="text" id="nomorId" class="form-control" name="nomor" placeholder="Nomor">
+            </div>
+            {{#if isInRole 'admin'}}
+            <div class="form-group col-md-4">
+              <label>Tujuan</label>
+                <select type="text" id="tujuanId" class="form-control" name="tujuan">
+                {{#each daftarUser}}
+                  <option value="{{capFirst profile.nama}}">{{capFirst profile.nama}}</option>
+                {{/each}}
+              </select>
+            </div>
+            {{/if}}
+            <div class="form-group col-md-12">
+                <label>Perihal</label>
+                <input required type="text" id="perihalId" class="form-control" name="perihal" placeholder="Perihal">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Jenis</label>
+                <select type="text" id="jenisId" class="form-control" name="jenis">
+                  {{#each jenis}}
+                    <option value="{{nama}}">{{capFirst nama}}</option>
+                  {{/each}}
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Sifat</label>
+                <select type="text" id="sifatId" class="form-control" name="sifat">
+                  {{#each sifat}}
+                    <option value="{{nama}}">{{capFirst nama}}</option>
+                  {{/each}}
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Status</label>
+                <select type="text" id="statusId" class="form-control" name="status">
+                  {{#each status}}
+                    <option value="{{nama}}">{{capFirst nama}}</option>
+                  {{/each}}
+                </select>
+            </div>
+
+            <div class="form-group col-md-12">
+                <label>Pesan</label>
+                <textarea id="pesanId" class="form-control" name="pesan"></textarea>
+            </div>
+
+            <div class="form-group col-md-12">
+              <label>Lampiran</label>
+              <span class="btn btn-success btn-file">
+                Browse...
+                <input type="file" accept=".gif,.jpg,.png" class="lampiran" id="lampiranId"/>
+              </span>
+            </div>
+            <div class="col-md-6">
+              <img src="{{currentUser.lampiran}}" alt="" width="40px"/>
+            </div>
+            <button type="submit" class="btn btn-primary unggahBerkasBtn">Unggah</button>
+        </form>
+
+
+</template>

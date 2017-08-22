@@ -1,0 +1,14 @@
+<template name="adminlayout">
+  {{> flashMessages}}
+  {{> navbar}}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        {{> Template.dynamic template=sidebar}}
+      </div>
+      <div class="col-md-9">
+        {{> Template.dynamic template=main}}
+      </div>
+    </div>
+  </div>
+</template>

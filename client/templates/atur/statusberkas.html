@@ -1,0 +1,42 @@
+<template name="aturstatusberkas">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-1">
+        <div class="form-group">
+          <label class="control-label">Masukkan status berkas:</label>
+          <input type="text" id="tambahStatusBerkasId" class="form-control input-sm"/>
+          <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+              <button class="btn btn-info tambahStatusBerkas" type="submit">
+              <i class="fa fa-database"> Tambah</i></button>
+            </div>
+          </div>
+        </div>
+<!-- display data -->
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+      <table class="table table-striped table-bordered table-responsive table-hover">
+        <thead>
+          <tr class="success">
+            <th>Status Berkas</th>
+            <th>Hapus</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each status}}
+            <tr>
+              <td>{{capFirst nama}}</td>
+              <td><button id="hapusStatusBerkasId" type="submit" class="btn btn-sm btn-danger hapusStatusBerkas">
+                   <i class="fa fa-trash"></i> Hapus</button>
+              </td>
+            </tr>
+          {{else}}
+            <tr>
+              <td colspan="4">Tidak ada status berkas! </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  </div>
+</div>
+</template>

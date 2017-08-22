@@ -1,0 +1,30 @@
+<template name="detilberkas">
+	<h1>Detil Berkas</h1><hr/>
+	{{#with detilBerkasData}}
+	<h4><strong>No. Surat: </strong>{{nomor}}</h4>
+	<h4><strong>Perihal: </strong>{{capFirst perihal}}</h4><br/>
+		<ul class="list-group">
+			<li class="list-group-item"><strong>Berkas ID: </strong> {{_id}}</li>
+	    <li class="list-group-item"><strong>Posting Sistem: </strong> {{formatDate createdAt}}</li>
+	    <li class="list-group-item"><strong>Tanggal Surat: </strong> {{formatDate tanggal}}</li>
+	    <li class="list-group-item"><strong>Tujuan: </strong> {{capFirst tujuan}}</li>
+	    <li class="list-group-item"><strong>Jenis: </strong> {{capFirst jenis}}</li>
+	    <li class="list-group-item"><strong>Sifat: </strong> {{capFirst sifat}}</li>
+	    <li class="list-group-item"><strong>Status: </strong> {{capFirst status}}</li>
+	    <li class="list-group-item"><strong>Lampiran: </strong> {{lampiran}}</li>
+	    <li class="list-group-item"><strong>Pesan (Pengirim): </strong> {{pesan}}</li>
+		</ul>
+	{{/with}}
+
+	<form class="add-reply">
+		<div class="form-group">
+			<label>Komentar</label>
+			<textarea class="form-control" id="reply" name="reply"></textarea>
+		</div>
+		<button type="submit" class="btn btn-primary">Balas</button>
+	</form>
+	<hr>
+	{{#each replies}}
+		<div class="reply-{{usertype}}"><strong>{{capFirst usertype}}</strong> [{{replyDate}}]: <strong>{{reply}}</strong></div>
+	{{/each}}
+</template>

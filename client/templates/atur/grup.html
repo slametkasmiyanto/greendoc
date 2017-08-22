@@ -1,0 +1,42 @@
+<template name="aturgrup">
+  <div class="row">
+      <div class="col-md-4 col-md-offset-1">
+        <div class="form-group">
+          <label class="control-label">Masukkan nama grup:</label>
+          <input type="text" id="tambahGrupId" class="form-control input-sm"/>
+          <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+              <button class="btn btn-info tambahGrup" type="submit">
+              <i class="fa fa-database"></i> Tambah</button>
+            </div>
+          </div>
+        </div>
+    </div>
+<!-- display data -->
+    <div class="col-md-4 col-md-offset-1">
+      <table class="table table-striped table-bordered table-responsive table-hover">
+        <thead>
+          <tr class="success">
+            <th>Nama Grup</th>
+            <th>Hapus</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each grups}}
+            <tr>
+              <td>{{capFirst nama}}</td>
+              <td><button id="hapusGrupId" type="submit" class="btn btn-sm btn-danger hapusGrup">
+                   <i class="fa fa-trash"> Hapus</i> </button>
+              </td>
+            </tr>
+          {{else}}
+            <tr>
+              <td colspan="4">Tidak ada grup! </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  </div>
+</div>
+</template>

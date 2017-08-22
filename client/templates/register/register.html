@@ -1,0 +1,38 @@
+<template name="register">
+  <form method="post">
+    <!-- kolom 1 -->
+  <div class="form-group col-md-5">
+    <label for="nama" class="control-label">Nama</label>
+    <input type="text" class="form-control" id="nama" placeholder="Nama" required autofocus/>
+
+    <label for="grup" class="control-label" style="margin-top:10px">Grup</label>
+    <select type="text" id="grup" class="form-control" required autofocus>
+      <option selected hidden>(Pilih Grup)</option>
+      <option value="sekolah">Sekolah</option>
+      <option value="admin">UPTD</option>
+      <option value="disdik">Disdik</option>
+    </select>
+
+    <label for ="alamat" class="control-label" style="margin-top:10px">Alamat</label>
+    <textarea rows="4" cols="60" class="form-control" id="alamat" placeholder="Alamat" autofocus></textarea>
+  </div>
+        <!-- end of kolom 1 -->
+  <div class="form-group col-md-5 col-md-offset-2">
+    <label for ="email" class="control-label">Alamat Surel</label>
+    <input type="email" class="form-control" id="email" placeholder="Alamat Surel" required autofocus/>
+
+    <label for="password" class="control-label" style="margin-top:10px">Kata Sandi</label>
+    <input type="password" class="form-control" id="password" placeholder="Kata Sandi" required autofocus/>
+
+    <label for="password2" class="control-label" style="margin-top:10px">Konfirmasi Kata Sandi</label>
+    <input type="password" class="form-control" id="password2" placeholder="Ulangi Kata Sandi" required autofocus/>
+<div class="row">
+  <div class="col-md-4 col-md-offset-8">
+  <button class="btn btn-md btn-info tambahAkunRegister" style="margin-top:40px" type="submit">Buat Akun</button>
+  </div>
+
+</div>
+
+  </div>
+</form>
+</template>

@@ -1,0 +1,42 @@
+<template name="atursifatberkas">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-1">
+        <div class="form-group">
+          <label class="control-label">Masukkan sifat berkas:</label>
+          <input type="text" id="tambahSifatBerkasId" class="form-control input-sm"/>
+          <div class="control-group">
+            <label class="control-label"></label>
+            <div class="controls">
+              <button class="btn btn-info tambahSifatBerkas" type="submit">
+              <i class="fa fa-database"> Tambah</i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+<!-- display data -->
+    <div class="col-md-4 col-md-offset-1">
+      <table class="table table-striped table-bordered table-responsive table-hover">
+        <thead>
+          <tr class="success">
+            <th>Sifat Berkas</th>
+            <th>Hapus</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each sifat}}
+            <tr>
+              <td>{{capFirst nama}}</td>
+              <td><button id="hapusSifatBerkasId" type="submit" class="btn btn-sm btn-danger hapusSifatBerkas">
+                   <i class="fa fa-trash"></i> Hapus</button>
+              </td>
+            </tr>
+          {{else}}
+            <tr>
+              <td colspan="4">Tidak ada sifat berkas! </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+  </div>
+</div>
+</template>
